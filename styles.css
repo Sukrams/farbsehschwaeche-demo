@@ -588,3 +588,7 @@ a:focus {
 .colorfield.blue {
     background-color: blue;
 }
+
+.colorfield-container {
+    margin: 1rem 0;
+}
