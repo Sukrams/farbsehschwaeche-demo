@@ -566,3 +566,32 @@ a:focus {
     background-color: #fff !important;
     color: #000 !important;
 }
+
+.colorfield {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+    border-radius: 4px;
+}
+
+.colorfield.red {
+    background-color: red;
+}
+
+.colorfield.green {
+    background-color: green;
+}
+
+.colorfield.blue {
+    background-color: blue;
+}
+
+.colorfield-container {
+    margin: 1rem 0;
+    display: flex;
+    gap: 1rem;
+    align-items: center;    
+}
