@@ -1,0 +1,568 @@
+/* Reset und Basis-Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+    transition: filter 0.3s ease;
+}
+
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.demo-section {
+    background: white;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.demo-section h2 {
+    margin-bottom: 1.5rem;
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+/* ========================
+   PROBLEMATISCHE FORMULARE (nur Farben)
+   ======================== */
+
+.form-bad .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-bad label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-bad input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-bad .input-error {
+    border-color: #dc3545; /* Nur rote Border */
+}
+
+.form-bad .input-success {
+    border-color: #28a745; /* Nur grüne Border */
+}
+
+.form-bad .error-message-bad {
+    color: #dc3545; /* Nur roter Text */
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+.form-bad .success-message-bad {
+    color: #28a745; /* Nur grüner Text */
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+/* ========================
+   BARRIEREFREIE FORMULARE (mit Icons)
+   ======================== */
+
+.form-good .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-good label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.input-container {
+    position: relative;
+}
+
+.form-good input {
+    width: 100%;
+    padding: 0.75rem 3rem 0.75rem 0.75rem;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-good .input-error {
+    border-color: #dc3545;
+    background-color: #fff5f5;
+}
+
+.form-good .input-success {
+    border-color: #28a745;
+    background-color: #f0fff4;
+}
+
+.error-icon, .success-icon {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.error-icon {
+    color: #dc3545;
+}
+
+.success-icon {
+    color: #28a745;
+}
+
+.form-good .error-message-good {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    padding: 0.5rem;
+    background-color: #fff5f5;
+    border-left: 4px solid #dc3545;
+    border-radius: 0 4px 4px 0;
+}
+
+.form-good .success-message-good {
+    color: #155724;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    padding: 0.5rem;
+    background-color: #d4edda;
+    border-left: 4px solid #28a745;
+    border-radius: 0 4px 4px 0;
+}
+
+/* ========================
+   PROBLEMATISCHE TEXTE UND LINKS
+   ======================== */
+
+.text-examples-bad {
+    line-height: 1.8;
+}
+
+.link-bad {
+    color: #0066cc;
+    text-decoration: none; /* Kein Unterstrich! */
+}
+
+.error-text-bad {
+    color: #dc3545; /* Nur rote Farbe */
+}
+
+.success-text-bad {
+    color: #28a745; /* Nur grüne Farbe */
+}
+
+.required-bad {
+    color: #dc3545; /* Nur rot für Pflichtfelder */
+}
+
+/* ========================
+   BARRIEREFREIE TEXTE UND LINKS
+   ======================== */
+
+.text-examples-good {
+    line-height: 1.8;
+}
+
+.link-good {
+    color: #0066cc;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.link-good:hover {
+    background-color: #e6f3ff;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+.error-text-good {
+    color: #721c24;
+    background-color: #f8d7da;
+    padding: 0.5rem;
+    border-left: 4px solid #dc3545;
+    border-radius: 4px;
+    margin: 0.5rem 0;
+}
+
+.success-text-good {
+    color: #155724;
+    background-color: #d4edda;
+    padding: 0.5rem;
+    border-left: 4px solid #28a745;
+    border-radius: 4px;
+    margin: 0.5rem 0;
+}
+
+.required-good {
+    color: #721c24;
+    font-weight: bold;
+    background-color: #fff3cd;
+    padding: 2px 4px;
+    border-radius: 3px;
+    border: 1px solid #ffeaa7;
+}
+
+/* ========================
+   STATUS-INDIKATOREN
+   ======================== */
+
+.status-comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.status-item {
+    padding: 0.75rem 1rem;
+    margin: 0.5rem 0;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+/* Problematische Status (nur Farben) */
+.status-online-bad {
+    background-color: #28a745;
+    color: white;
+}
+
+.status-offline-bad {
+    background-color: #6c757d;
+    color: white;
+}
+
+.status-away-bad {
+    background-color: #ffc107;
+    color: black;
+}
+
+.status-busy-bad {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Barrierefreie Status (mit Icons und Mustern) */
+.status-online-good {
+    background-color: #d4edda;
+    color: #155724;
+    border-left: 4px solid #28a745;
+}
+
+.status-online-good i {
+    color: #28a745;
+}
+
+.status-offline-good {
+    background-color: #f8f9fa;
+    color: #495057;
+    border-left: 4px solid #6c757d;
+    opacity: 0.7;
+}
+
+.status-offline-good i {
+    color: #6c757d;
+}
+
+.status-away-good {
+    background-color: #fff3cd;
+    color: #856404;
+    border-left: 4px solid #ffc107;
+    background-image: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 5px,
+        rgba(255, 193, 7, 0.1) 5px,
+        rgba(255, 193, 7, 0.1) 10px
+    );
+}
+
+.status-away-good i {
+    color: #ffc107;
+}
+
+.status-busy-good {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-left: 4px solid #dc3545;
+    background-image: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 3px,
+        rgba(220, 53, 69, 0.1) 3px,
+        rgba(220, 53, 69, 0.1) 6px
+    );
+}
+
+.status-busy-good i {
+    color: #dc3545;
+}
+
+/* ========================
+   BUTTON-ZUSTÄNDE
+   ======================== */
+
+.button-comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.buttons-bad, .buttons-good {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Problematische Buttons (nur Farben) */
+.btn-primary-bad, .btn-success-bad, .btn-warning-bad, .btn-danger-bad, .btn-disabled-bad {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary-bad {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-success-bad {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-warning-bad {
+    background-color: #ffc107;
+    color: black;
+}
+
+.btn-danger-bad {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-disabled-bad {
+    background-color: #6c757d;
+    color: white;
+    cursor: not-allowed;
+}
+
+/* Barrierefreie Buttons (mit Icons und besserer Kennzeichnung) */
+.btn-primary-good, .btn-success-good, .btn-warning-good, .btn-danger-good, .btn-disabled-good {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.btn-primary-good {
+    background-color: #007bff;
+    border-color: #0056b3;
+    color: white;
+}
+
+.btn-primary-good:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,123,255,0.3);
+}
+
+.btn-success-good {
+    background-color: #28a745;
+    border-color: #1e7e34;
+    color: white;
+}
+
+.btn-success-good:hover {
+    background-color: #1e7e34;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(40,167,69,0.3);
+}
+
+.btn-warning-good {
+    background-color: #ffc107;
+    border-color: #d39e00;
+    color: #212529;
+    background-image: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 4px,
+        rgba(0,0,0,0.1) 4px,
+        rgba(0,0,0,0.1) 8px
+    );
+}
+
+.btn-warning-good:hover {
+    background-color: #e0a800;
+    transform: translateY(-1px);
+}
+
+.btn-danger-good {
+    background-color: #dc3545;
+    border-color: #bd2130;
+    color: white;
+}
+
+.btn-danger-good:hover {
+    background-color: #bd2130;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(220,53,69,0.3);
+}
+
+.btn-disabled-good {
+    background-color: #6c757d;
+    border-color: #545b62;
+    color: white;
+    cursor: not-allowed;
+    opacity: 0.6;
+    background-image: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 2px,
+        rgba(255,255,255,0.2) 2px,
+        rgba(255,255,255,0.2) 4px
+    );
+}
+
+/* ========================
+   SIMULATOR CONTROLS
+   ======================== */
+
+.simulator-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.filter-btn {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #007bff;
+    background-color: white;
+    color: #007bff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.filter-btn:hover {
+    background-color: #e6f3ff;
+}
+
+.filter-btn.active {
+    background-color: #007bff;
+    color: white;
+}
+
+/* ========================
+   FARBFEHLSICHTIGKEITS-FILTER
+   ======================== */
+
+/* Protanopie (Rotblindheit) */
+.filter-protanopia {
+    filter: sepia(1) saturate(0.8) hue-rotate(90deg);
+}
+
+/* Deuteranopie (Grünblindheit) */
+.filter-deuteranopia {
+    filter: sepia(1) saturate(0.6) hue-rotate(180deg);
+}
+
+/* Tritanopie (Blaublindheit) */
+.filter-tritanopia {
+    filter: sepia(1) saturate(0.9) hue-rotate(270deg);
+}
+
+/* ========================
+   FOOTER
+   ======================== */
+
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+/* ========================
+   RESPONSIVE DESIGN
+   ======================== */
+
+@media (max-width: 768px) {
+    .status-comparison,
+    .button-comparison {
+        grid-template-columns: 1fr;
+    }
+    
+    .simulator-controls {
+        flex-direction: column;
+    }
+    
+    .filter-btn {
+        width: 100%;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .demo-section {
+        padding: 1rem;
+    }
+}
+
+/* ========================
+   ZUSÄTZLICHE HILFSMITTEL
+   ======================== */
+
+/* Fokus-Sichtbarkeit für Tastaturnavigation */
+button:focus,
+input:focus,
+a:focus {
+    outline: 3px solid #007bff;
+    outline-offset: 2px;
+}
+
+/* Hochkontrast für wichtige Elemente */
+.high-contrast {
+    border: 2px solid #000 !important;
+    background-color: #fff !important;
+    color: #000 !important;
+}

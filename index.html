@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farbfehlsichtigkeit Demo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Farbfehlsichtigkeit Demo</h1>
+        <p>Beispiele für problematische und barrierefreie Designentscheidungen</p>
+    </header>
+
+    <main>
+        <!-- Beispiel 1: Formular mit nur Farben als Feedback -->
+        <section class="demo-section">
+            <h2>❌ Problematisch: Formular nur mit Farbfeedback</h2>
+            <form class="form-bad">
+                <div class="form-group">
+                    <label for="email-bad">E-Mail-Adresse:</label>
+                    <input type="email" id="email-bad" class="input-error" value="invalid-email">
+                    <div class="error-message-bad">Ungültige E-Mail-Adresse</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password-bad">Passwort:</label>
+                    <input type="password" id="password-bad" class="input-success" value="ValidPassword123!">
+                    <div class="success-message-bad">Passwort ist gültig</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-bad">Passwort bestätigen:</label>
+                    <input type="password" id="confirm-bad" class="input-error" value="DifferentPassword">
+                    <div class="error-message-bad">Passwörter stimmen nicht überein</div>
+                </div>
+            </form>
+        </section>
+
+        <!-- Beispiel 2: Verbessertes Formular mit Icons und zusätzlichen Hinweisen -->
+        <section class="demo-section">
+            <h2>✅ Barrierefrei: Formular mit Icons und klaren Hinweisen</h2>
+            <form class="form-good">
+                <div class="form-group">
+                    <label for="email-good">E-Mail-Adresse:</label>
+                    <div class="input-container">
+                        <input type="email" id="email-good" class="input-error" value="invalid-email">
+                        <i class="fas fa-exclamation-circle error-icon"></i>
+                    </div>
+                    <div class="error-message-good">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        Ungültige E-Mail-Adresse
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password-good">Passwort:</label>
+                    <div class="input-container">
+                        <input type="password" id="password-good" class="input-success" value="ValidPassword123!">
+                        <i class="fas fa-check-circle success-icon"></i>
+                    </div>
+                    <div class="success-message-good">
+                        <i class="fas fa-check"></i>
+                        Passwort ist gültig
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-good">Passwort bestätigen:</label>
+                    <div class="input-container">
+                        <input type="password" id="confirm-good" class="input-error" value="DifferentPassword">
+                        <i class="fas fa-exclamation-circle error-icon"></i>
+                    </div>
+                    <div class="error-message-good">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        Passwörter stimmen nicht überein
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <!-- Beispiel 3: Problematische Links und Texte -->
+        <section class="demo-section">
+            <h2>❌ Problematisch: Nur Farbe als Information</h2>
+            <div class="text-examples-bad">
+                <p>Hier ist ein normaler Text mit einem <a href="#" class="link-bad">wichtigen Link</a> ohne Unterstreichen.</p>
+                <p class="error-text-bad">Dies ist eine Fehlermeldung in rot.</p>
+                <p class="success-text-bad">Dies ist eine Erfolgsmeldung in grün.</p>
+                <p>Bitte beachten Sie die <span class="required-bad">Pflichtfelder</span> im Formular.</p>
+            </div>
+        </section>
+
+        <!-- Beispiel 4: Verbesserte Links und Texte -->
+        <section class="demo-section">
+            <h2>✅ Barrierefrei: Zusätzliche visuelle Hinweise</h2>
+            <div class="text-examples-good">
+                <p>Hier ist ein normaler Text mit einem <a href="#" class="link-good">wichtigen Link <i class="fas fa-external-link-alt"></i></a>.</p>
+                <p class="error-text-good"><i class="fas fa-exclamation-triangle"></i> Dies ist eine Fehlermeldung.</p>
+                <p class="success-text-good"><i class="fas fa-check-circle"></i> Dies ist eine Erfolgsmeldung.</p>
+                <p>Bitte beachten Sie die <span class="required-good">Pflichtfelder *</span> im Formular.</p>
+            </div>
+        </section>
+
+        <!-- Beispiel 5: Status-Indikatoren -->
+        <section class="demo-section">
+            <h2>Status-Indikatoren Vergleich</h2>
+            
+            <div class="status-comparison">
+                <div class="status-bad">
+                    <h3>❌ Nur Farben</h3>
+                    <div class="status-item status-online-bad">Online</div>
+                    <div class="status-item status-offline-bad">Offline</div>
+                    <div class="status-item status-away-bad">Abwesend</div>
+                    <div class="status-item status-busy-bad">Beschäftigt</div>
+                </div>
+
+                <div class="status-good">
+                    <h3>✅ Mit Icons und Mustern</h3>
+                    <div class="status-item status-online-good">
+                        <i class="fas fa-circle"></i> Online
+                    </div>
+                    <div class="status-item status-offline-good">
+                        <i class="fas fa-circle"></i> Offline
+                    </div>
+                    <div class="status-item status-away-good">
+                        <i class="fas fa-circle"></i> Abwesend
+                    </div>
+                    <div class="status-item status-busy-good">
+                        <i class="fas fa-circle"></i> Beschäftigt
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Beispiel 6: Button-Zustände -->
+        <section class="demo-section">
+            <h2>Button-Zustände</h2>
+            
+            <div class="button-comparison">
+                <div class="buttons-bad">
+                    <h3>❌ Nur Farben</h3>
+                    <button class="btn-primary-bad">Primär</button>
+                    <button class="btn-success-bad">Erfolg</button>
+                    <button class="btn-warning-bad">Warnung</button>
+                    <button class="btn-danger-bad">Gefahr</button>
+                    <button class="btn-disabled-bad" disabled>Deaktiviert</button>
+                </div>
+
+                <div class="buttons-good">
+                    <h3>✅ Mit Icons und Mustern</h3>
+                    <button class="btn-primary-good">
+                        <i class="fas fa-play"></i> Primär
+                    </button>
+                    <button class="btn-success-good">
+                        <i class="fas fa-check"></i> Erfolg
+                    </button>
+                    <button class="btn-warning-good">
+                        <i class="fas fa-exclamation-triangle"></i> Warnung
+                    </button>
+                    <button class="btn-danger-good">
+                        <i class="fas fa-times"></i> Gefahr
+                    </button>
+                    <button class="btn-disabled-good" disabled>
+                        <i class="fas fa-lock"></i> Deaktiviert
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Simulator Toggle -->
+        <section class="demo-section">
+            <h2>Farbfehlsichtigkeit Simulator</h2>
+            <div class="simulator-controls">
+                <button onclick="toggleFilter('none')" class="filter-btn active">Normal</button>
+                <button onclick="toggleFilter('protanopia')" class="filter-btn">Protanopie (Rotblindheit)</button>
+                <button onclick="toggleFilter('deuteranopia')" class="filter-btn">Deuteranopie (Grünblindheit)</button>
+                <button onclick="toggleFilter('tritanopia')" class="filter-btn">Tritanopie (Blaublindheit)</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Diese Demo zeigt, wie wichtig es ist, nicht nur auf Farben zu setzen, sondern zusätzliche visuelle Hinweise zu verwenden.</p>
+    </footer>
+
+    <script>
+        function toggleFilter(type) {
+            const body = document.body;
+            const buttons = document.querySelectorAll('.filter-btn');
+            
+            // Remove all filter classes
+            body.className = body.className.replace(/filter-\w+/g, '');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            // Add new filter class
+            if (type !== 'none') {
+                body.classList.add(`filter-${type}`);
+            }
+            
+            // Update active button
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
